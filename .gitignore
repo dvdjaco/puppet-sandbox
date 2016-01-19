@@ -1,4 +1,5 @@
 nodes.pp
 modules/*
 .vagrant
-manifests
+manifests/*
+hieradata/*
