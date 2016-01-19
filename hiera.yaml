@@ -1,0 +1,9 @@
+----
+:backends:
+  - yaml
+:yaml:
+  :datadir: /
+:hierarchy:
+  - "clients/%{::clientcert}"
+  - "environment/%{::applicationtier}"
+  - common
