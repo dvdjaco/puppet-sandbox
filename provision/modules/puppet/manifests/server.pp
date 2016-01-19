@@ -94,6 +94,22 @@ class puppet::server(
     source  => 'puppet:///modules/puppet/nodes.pp',
   }
 
+  file { '/etc/puppet/hieradata':
+    ensure => link,
+    target => '/vagrant/hieradata',
+    mode => '0644',
+  }
+
+  file { 'hiera.yaml':
+    path   => '/etc/puppet/hiera.yaml',
+    owner   => 'puppet',
+    group   => 'puppet',
+    mode    => '0644',
+    ensure => link,
+    target => '/vagrant/hiera.yaml',
+    require => Package[ 'puppetmaster' ],
+  }
+
   service { 'puppetmaster':
     enable => true,
     ensure => running,
