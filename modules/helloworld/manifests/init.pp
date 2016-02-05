@@ -13,13 +13,8 @@
 #
 # class { 'helloworld': }
 #
-class helloworld {
-
-  file { '/tmp/hello':
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0666',
-    content => "world\n",
-  }
-
+class helloworld (
+  $msg = $helloworld::params::message
+  ) inherits helloworld::params {
+  notify { $msg: }
 }

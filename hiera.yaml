@@ -1,8 +1,8 @@
-----
+---
 :backends:
   - yaml
 :yaml:
-  :datadir: /
+  :datadir: /etc/puppet/hieradata/
 :hierarchy:
   - "clients/%{::clientcert}"
   - "environment/%{::applicationtier}"
