@@ -13,13 +13,9 @@
 #
 # class { 'helloworld': }
 #
-class helloworld {
+class helloworld (
+    $message = $helloworld::params::message,
+    ) inherits helloworld::params {
 
-  file { '/tmp/hello':
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0666',
-    content => "world\n",
-  }
-
+    include helloworld::print
 }

@@ -87,6 +87,15 @@ class puppet::server(
     require => Package[ 'puppetmaster' ],
   }
 
+  file { '/etc/puppet/hiera.yaml':
+    ensure  => present,
+    replace => true,
+    force   => true,
+    source  => 'puppet:///modules/puppet/hiera.yaml',
+    require => Package[ 'puppetmaster' ],
+    notify  => Service[ 'puppetmaster' ],
+  }
+
   # initialize a template file then ignore
   file { '/vagrant/nodes.pp':
     ensure  => present,
