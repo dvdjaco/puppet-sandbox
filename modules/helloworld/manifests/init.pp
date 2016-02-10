@@ -14,7 +14,8 @@
 # class { 'helloworld': }
 #
 class helloworld (
-  $message = $helloworld::params::message
-  ) inherits helloworld::params {
-  notify { $message: }
+    $message = $helloworld::params::message,
+    ) inherits helloworld::params {
+
+    include helloworld::print
 }
