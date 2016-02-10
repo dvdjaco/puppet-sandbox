@@ -1,2 +1,11 @@
+# client1.example.com.yaml
 ---
-#helloworld::msg: "This one comes from client1.example.com.yaml via hiera."
+accounts::usergroups:
+  ops:
+    - bob
+    - alice
+
+accounts::ssh_keys:
+  frank:
+    type: ssh-rsa
+    public: FRANK-S-RSA-PUBLIC-KEY

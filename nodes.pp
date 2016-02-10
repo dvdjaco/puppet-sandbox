@@ -8,9 +8,18 @@ node 'puppet' { }
 ##### CLIENTS
 
 node 'client1' {
-  class { 'helloworld':
-    $message => 'this comes from nodes.pp',
+
+  class { 'accounts':
+    ssh_keys       => hiera_hash('accounts::ssh_keys', {}),
+    users          => hiera_hash('accounts::users', {}),
+    usergroups     => hiera_hash('accounts::usergroups', {}),
+    purge_ssh_keys => true,
   }
+
+  accounts::account {'ubuntu':
+    authorized_keys => ['@ops']
+  }
+
 }
 
 

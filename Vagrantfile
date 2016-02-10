@@ -4,9 +4,9 @@
 domain = 'example.com'
 
 puppet_nodes = [
-  {:hostname => 'puppet',  :ip => '172.16.32.10', :box => 'precise64', :fwdhost => 8140, :fwdguest => 8140, :ram => 512},
-  {:hostname => 'client1', :ip => '172.16.32.11', :box => 'precise64'},
-  {:hostname => 'client2', :ip => '172.16.32.12', :box => 'precise64'},
+  {:hostname => 'puppet',  :ip => '172.16.32.10', :box => 'dvdjaco/q-precise64', :fwdhost => 8140, :fwdguest => 8140, :ram => 512},
+  {:hostname => 'client1', :ip => '172.16.32.11', :box => 'dvdjaco/q-precise64'},
+  {:hostname => 'client2', :ip => '172.16.32.12', :box => 'dvdjaco/q-precise64'},
 ]
 
 Vagrant.configure("2") do |config|
