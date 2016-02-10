@@ -1,0 +1,2 @@
+---
+#helloworld::msg: "This one comes from common.yaml via hiera."
