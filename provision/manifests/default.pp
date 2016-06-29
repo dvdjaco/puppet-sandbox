@@ -13,7 +13,7 @@ class { 'puppet':
 }
 class { 'networking': }
 
-if $hostname == 'puppet' {
+if $hostname == 'master' {
   class { 'puppet::server':
     ensure => '3.6.2-1puppetlabs1'
   }
