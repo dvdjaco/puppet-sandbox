@@ -1,19 +1,2 @@
 # client1.example.com.yaml
 ---
-
-openvpn::servers:
-  'openvpn1':
-    country: 'ES'
-    province: 'ES'
-    city: 'Barcelona'
-    organization: 'Qustodio'
-    email: 'cloud@qustodio.com'
-    local: '172.16.32.11'
-    server: '172.16.55.0 255.255.255.0'
-
-openvpn::clients:
-  'client1':
-    server: 'openvpn1'
-  'client2':
-    server: 'openvpn1'
-    keypass: 'test2'

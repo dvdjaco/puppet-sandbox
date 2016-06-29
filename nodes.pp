@@ -3,5 +3,5 @@
 #
 
 node /^client1.*/ {
-  class { 'openvpn': }
+
 }
