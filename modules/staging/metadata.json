@@ -1,6 +1,6 @@
 {
   "name": "puppet-staging",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "voxpupuli",
   "summary": "Compressed file staging and deployment",
   "license": "Apache-2.0",
@@ -15,7 +15,6 @@
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "4",
         "5",
         "6",
         "7"
@@ -24,7 +23,6 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "4",
         "5",
         "6",
         "7"
@@ -33,7 +31,6 @@
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
-        "4",
         "5",
         "6",
         "7"
@@ -42,7 +39,6 @@
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
-        "4",
         "5",
         "6",
         "7"
@@ -58,14 +54,16 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "6",
-        "7"
+        "7",
+        "8"
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "10.04",
-        "12.04"
+        "12.04",
+        "14.04",
+        "16.04"
       ]
     },
     {
@@ -85,7 +83,8 @@
         "Server 2012",
         "Server 2012 R2",
         "7",
-        "8"
+        "8",
+        "10"
       ]
     },
     {
@@ -94,6 +93,15 @@
         "5.3",
         "6.1",
         "7.1"
+      ]
+    },
+    {
+      "operatingsystem": "OpenBSD",
+      "operatingsystemrelease": [
+        "5.7",
+        "5.8",
+        "5.9",
+        "6.0"
       ]
     }
   ],

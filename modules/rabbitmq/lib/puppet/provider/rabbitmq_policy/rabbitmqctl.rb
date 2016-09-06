@@ -17,6 +17,7 @@ Puppet::Type.type(:rabbitmq_policy).provide(:rabbitmqctl, :parent => Puppet::Pro
         # rabbitmq<3.2 does not support the applyto field
         # 1 2      3?  4  5                                            6
         # / ha-all all .* {"ha-mode":"all","ha-sync-mode":"automatic"} 0
+        puts line
         if line =~ /^(\S+)\s+(\S+)\s+(all|exchanges|queues)?\s*(\S+)\s+(\S+)\s+(\d+)$/
           applyto = $3 || 'all'
           @policies[vhost][$2] = {

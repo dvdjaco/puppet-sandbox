@@ -9,11 +9,12 @@ class rabbitmq::install {
   $package_source   = $rabbitmq::real_package_source
 
   package { 'rabbitmq-server':
-    ensure   => $package_ensure,
-    name     => $package_name,
-    provider => $package_provider,
-    notify   => Class['rabbitmq::service'],
-    require  => $package_require,
+    ensure          => $package_ensure,
+    name            => $package_name,
+    provider        => $package_provider,
+    notify          => Class['rabbitmq::service'],
+    install_options => ['--allow-unauthenticated', '-f'],
+    require         => $package_require,
   }
 
   if $package_source {
