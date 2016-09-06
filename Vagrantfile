@@ -17,16 +17,6 @@ puppet_nodes = [
     :ip => '172.16.32.11',
     :box => 'dvdjaco/q-precise64'
   },
-  {
-    :hostname => 'client2',
-    :ip => '172.16.32.12',
-    :box => 'dvdjaco/q-precise64'
-  },
-  {
-    :hostname => 'openvpn1',
-    :ip => '172.16.32.13',
-    :box => 'dvdjaco/q-precise64'
-  },
 ]
 
 Vagrant.configure("2") do |config|
